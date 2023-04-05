@@ -1,28 +1,27 @@
-// handle current marker active
-function activePosition(locationListName) {
-  document
-    .querySelectorAll('.location-name')
-    .forEach((el) => el.classList.remove('active'));
-  if (locationListName) {
-    locationListName.classList.add('active');
-  }
-}
+// web refferences
+// http://users.umiacs.umd.edu/~louiqa/2014/BMGT406/novel-project-tutorial/novel-google-maps-javascript.html
+// https://stackoverflow.com/questions/42323569/customize-google-map-api-v3-marker-label
 
-async function initMap() {
-  const mapOptions = {
+async function mapHandler() {
+  const googlemap = new google.maps.Map(document.getElementById('map'), {
     center: { lat: 1.293666, lng: 103.850524 },
     zoom: 15,
-  };
+  });
 
-  const googlemap = new google.maps.Map(
-    document.getElementById('map'),
-    mapOptions
-  );
-
-  const positionData = await getDataFromJson();
+  const positionData = await getDataFromJson(); // will return an array of positions
   let currentActiveMarker = null;
-  const markers = [];
 
+  //this will reset active marker back to default because without this the marker
+  //will stay in large position even when another active marker is selected
+  const markers = [];
+  function resetMarkers(iconConfig) {
+    markers.forEach((x) => {
+      if (x.label.text != currentActiveMarker) {
+        x.setIcon(iconConfig.icon);
+        x.setLabel(iconConfig.label);
+      }
+    });
+  }
   positionData.forEach((data) => {
     const { name, img, description, address, website, content } = data.about;
     const locationListName = document.createElement('div');
@@ -33,8 +32,8 @@ async function initMap() {
         url: '/img/path-map.png',
         scaledSize: new google.maps.Size(90, 95),
         labelOrigin: new google.maps.Point(
-          data.additionalDataPosition[0].x,
-          data.additionalDataPosition[0].y
+          data.labelPos[0].x,
+          data.labelPos[0].y
         ),
       },
       label: {
@@ -49,8 +48,8 @@ async function initMap() {
         url: '/img/path-map.png',
         scaledSize: new google.maps.Size(180, 185),
         labelOrigin: new google.maps.Point(
-          data.additionalDataPosition[1].x,
-          data.additionalDataPosition[1].y
+          data.labelPos[1].x,
+          data.labelPos[1].y
         ),
       },
       label: {
@@ -67,29 +66,12 @@ async function initMap() {
       title: name,
       label: smallMarkerConfig.label,
     });
-
-    //this will reset active marker back to default because without this the marker
-    //will stay in large position even when another active marker is selected
     markers.push(marker);
-    // reset all marker
-    function resetMarkers() {
-      markers.forEach((x) => {
-        if (x.label.text != currentActiveMarker) {
-          x.setIcon(smallMarkerConfig.icon);
-          x.setLabel(smallMarkerConfig.label);
-        }
-      });
-    }
 
-    // handle tranform marker icon
-    function transformToSmallMarker() {
-      marker.setIcon(smallMarkerConfig.icon);
-      marker.setLabel(smallMarkerConfig.label);
-    }
-
-    function transformToLargeMarker() {
-      marker.setIcon(bigMarkerConfig.icon);
-      marker.setLabel(bigMarkerConfig.label);
+    // handle transform marker icon
+    function transformMarker(markerConfig) {
+      marker.setIcon(markerConfig.icon);
+      marker.setLabel(markerConfig.label);
     }
 
     function centeredMarker() {
@@ -100,10 +82,10 @@ async function initMap() {
     function setActiveMarker() {
       currentActiveMarker = name;
       // first need to reset other active markers
-      resetMarkers();
+      resetMarkers(smallMarkerConfig);
 
       centeredMarker();
-      transformToLargeMarker();
+      transformMarker(bigMarkerConfig);
       // set active sidebar
       activePosition(locationListName);
       sidebarDescriptionHandler(
@@ -121,7 +103,7 @@ async function initMap() {
       currentActiveMarker = null;
       googlemap.setZoom(15);
 
-      transformToSmallMarker();
+      transformMarker(smallMarkerConfig);
       // reset the active sidebar
       activePosition();
 
@@ -130,12 +112,12 @@ async function initMap() {
 
     // marker handler
     marker.addListener('mouseover', function () {
-      transformToLargeMarker();
+      transformMarker(bigMarkerConfig);
     });
 
     marker.addListener('mouseout', function () {
       if (currentActiveMarker != name) {
-        transformToSmallMarker();
+        transformMarker(smallMarkerConfig);
       }
     });
 
@@ -144,7 +126,6 @@ async function initMap() {
     });
 
     // sidebar list item handler
-
     // append the location name to sidebar
     locationListContainer.append(locationListName);
     locationListName.classList.add('location-name');
@@ -155,15 +136,15 @@ async function initMap() {
     });
 
     locationListName.addEventListener('mouseover', function () {
-      transformToLargeMarker();
+      transformMarker(bigMarkerConfig);
     });
 
     locationListName.addEventListener('mouseout', function () {
       if (currentActiveMarker != name) {
-        transformToSmallMarker();
+        transformMarker(smallMarkerConfig);
       }
     });
   });
 }
 
-initMap();
+google.maps.event.addDomListener(window, 'load', mapHandler());

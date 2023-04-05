@@ -8,7 +8,6 @@ const textDesc = document.querySelector('.text-desc');
 const textContent = document.querySelector('.text-content');
 const descLocation = document.querySelector('.address');
 const descWeb = document.querySelector('.website');
-
 const closeDesc = document.querySelector('#close');
 
 async function sidebarList() {
@@ -33,6 +32,7 @@ async function sidebarList() {
     sidebarContainer.append(sidebarContent);
   });
 }
+sidebarList();
 
 function sidebarDescriptionHandler(title, img, text, content, location, web) {
   sidebarDescription.classList.remove('hidden');
@@ -48,4 +48,12 @@ function closeSidebarDescription() {
   sidebarDescription.classList.add('hidden');
 }
 
-sidebarList();
+// handle current marker active
+function activePosition(locationListName) {
+  document
+    .querySelectorAll('.location-name')
+    .forEach((el) => el.classList.remove('active'));
+  if (locationListName) {
+    locationListName.classList.add('active');
+  }
+}

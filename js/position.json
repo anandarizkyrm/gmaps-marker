@@ -10,7 +10,7 @@
       "address": "10 Bayfront Avenue, Singapore",
       "website": "www.merlion.com"
     },
-    "additionalDataPosition": [
+    "labelPos": [
       {
         "x": 60,
         "y": 32
@@ -32,7 +32,7 @@
       "address": "3 Marina Avenue, Singapore",
       "website": "www.marinabaysands.com"
     },
-    "additionalDataPosition": [
+    "labelPos": [
       {
         "x": 88,
         "y": 32
@@ -54,7 +54,7 @@
       "address": "4 The Bay Road, Singapore",
       "website": "www.gardensbythebay.com"
     },
-    "additionalDataPosition": [
+    "labelPos": [
       {
         "x": 92,
         "y": 32
@@ -76,7 +76,7 @@
       "address": "5 Chinatown, Singapore",
       "website": "www.chinatown.com"
     },
-    "additionalDataPosition": [
+    "labelPos": [
       {
         "x": 67,
         "y": 32
@@ -98,7 +98,7 @@
       "address": "6 Asian Civilisations, Singapore",
       "website": "www.asiancivilmuseum.com"
     },
-    "additionalDataPosition": [
+    "labelPos": [
       {
         "x": 112,
         "y": 32
@@ -120,7 +120,7 @@
       "address": "7 Clarke Quay, Singapore",
       "website": "www.clarkequay.com"
     },
-    "additionalDataPosition": [
+    "labelPos": [
       {
         "x": 71,
         "y": 33
@@ -142,7 +142,7 @@
       "address": "8 Fort Canning, Singapore",
       "website": "www.fortcanningpark.com"
     },
-    "additionalDataPosition": [
+    "labelPos": [
       {
         "x": 87,
         "y": 32
@@ -164,7 +164,7 @@
       "address": "9 Flyer, Singapore",
       "website": "www.singaporeflyer.com"
     },
-    "additionalDataPosition": [
+    "labelPos": [
       {
         "x": 80,
         "y": 32
@@ -186,7 +186,7 @@
       "address": "9 Orchard Road, Singapore",
       "website": "www.orchard.com"
     },
-    "additionalDataPosition": [
+    "labelPos": [
       {
         "x": 75,
         "y": 32
