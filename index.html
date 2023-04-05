@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOVYRIgupAurZup5y1PRh8Ismb1A3lLao&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
+    <script src="./js/utils.js" defer></script>
+    <script src="./js/index.js" defer></script>
+    <script src="./js/map.js" defer></script>
+
+    <title>Maps Marker</title>
+  </head>
+  <body>
+    <div class="sidebar"></div>
+    <div class="sidebar-location">
+      <div class="select-wrapper">
+        <select>
+          <option>Filter By Favorites</option>
+        </select>
+      </div>
+      <div class="location-list"></div>
+    </div>
+    <div class="map-container">
+      <div class="content-header">
+        <span> TOP-RATED TOURIST ATTRACTION IN SINGAPORE </span>
+        <div class="header-action">
+          <img width="40" src="./img/setting.png" alt="setting" />
+          <img width="40" src="./img/question.png" alt="setting" />
+          <img width="40" src="./img/close.png" alt="setting" id="close" />
+        </div>
+      </div>
+      <div class="map-content-wrapper">
+        <div id="map"></div>
+        <div class="side-location-description hidden">
+          <img class="image-desc" src="" alt="img-location" />
+          <p class="location-description-title"></p>
+          <div class="more-desc">
+            <p class="text-desc"></p>
+            <p class="text-content"></p>
+            <div class="others-wrapper">
+              <img width="20" src="./img/location.png" />
+              <span class="address"></span>
+            </div>
+            <div class="others-wrapper">
+              <img width="20" src="./img/web.png" />
+              <span class="website"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

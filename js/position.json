@@ -1,0 +1,200 @@
+[
+  {
+    "lat": 1.28692,
+    "lng": 103.85457,
+    "about": {
+      "name": "Merlion",
+      "img": "./img/merlion.png",
+      "description": "The Merlion is the national personification of Singapore",
+      "content": "Its name combines 'mer' meaning the sea and 'lion'. The fish body represents Singapore origin as a fishing village when it was called Temasek, which means 'sea town' in Javanese. The lion head represents Singapore's original name-Singapura-meaning 'lion city' or 'kota singa'.",
+      "address": "10 Bayfront Avenue, Singapore",
+      "website": "www.merlion.com"
+    },
+    "additionalDataPosition": [
+      {
+        "x": 60,
+        "y": 32
+      },
+      {
+        "x": 88,
+        "y": 60
+      }
+    ]
+  },
+  {
+    "lat": 1.283099,
+    "lng": 103.860295,
+    "about": {
+      "name": "Marina Bay Sands",
+      "img": "./img/marinabaysands.jpg",
+      "description": "The Marina Bay Sands is the national personification of Singapore",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "address": "3 Marina Avenue, Singapore",
+      "website": "www.marinabaysands.com"
+    },
+    "additionalDataPosition": [
+      {
+        "x": 88,
+        "y": 32
+      },
+      {
+        "x": 116,
+        "y": 60
+      }
+    ]
+  },
+  {
+    "lat": 1.28179,
+    "lng": 103.863954,
+    "about": {
+      "name": "Gardens By The Bay",
+      "img": "./img/gardensbythebay.jpg",
+      "description": "The Gardens By The Bay is the national personification of Singapore",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "address": "4 The Bay Road, Singapore",
+      "website": "www.gardensbythebay.com"
+    },
+    "additionalDataPosition": [
+      {
+        "x": 92,
+        "y": 32
+      },
+      {
+        "x": 122,
+        "y": 60
+      }
+    ]
+  },
+  {
+    "lat": 1.284193,
+    "lng": 103.843362,
+    "about": {
+      "name": "Chinatown",
+      "img": "./img/chinatown.jpg",
+      "description": "The Chinatown is the national personification of Singapore",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "address": "5 Chinatown, Singapore",
+      "website": "www.chinatown.com"
+    },
+    "additionalDataPosition": [
+      {
+        "x": 67,
+        "y": 32
+      },
+      {
+        "x": 97,
+        "y": 60
+      }
+    ]
+  },
+  {
+    "lat": 1.287466,
+    "lng": 103.851424,
+    "about": {
+      "name": "Asian Civilisations Museum",
+      "img": "./img/acms.jpg",
+      "description": "The Asian Civilisations Museum is the national personification of Singapore",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "address": "6 Asian Civilisations, Singapore",
+      "website": "www.asiancivilmuseum.com"
+    },
+    "additionalDataPosition": [
+      {
+        "x": 112,
+        "y": 32
+      },
+      {
+        "x": 143,
+        "y": 60
+      }
+    ]
+  },
+  {
+    "lat": 1.290555,
+    "lng": 103.846188,
+    "about": {
+      "name": "Clarke Quay",
+      "img": "./img/clarkequay.jpg",
+      "description": "The Clarke Quay is the national personification of Singapore",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "address": "7 Clarke Quay, Singapore",
+      "website": "www.clarkequay.com"
+    },
+    "additionalDataPosition": [
+      {
+        "x": 71,
+        "y": 33
+      },
+      {
+        "x": 100,
+        "y": 60
+      }
+    ]
+  },
+  {
+    "lat": 1.295526,
+    "lng": 103.845331,
+    "about": {
+      "name": "Fort Canning Park",
+      "img": "./img/fort-canning-park.jpg",
+      "description": "The Fort Canning Park is the national personification of Singapore",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "address": "8 Fort Canning, Singapore",
+      "website": "www.fortcanningpark.com"
+    },
+    "additionalDataPosition": [
+      {
+        "x": 87,
+        "y": 32
+      },
+      {
+        "x": 117,
+        "y": 60
+      }
+    ]
+  },
+  {
+    "lat": 1.289332,
+    "lng": 103.863152,
+    "about": {
+      "name": "Singapore Flyer",
+      "img": "./img/singaporeflyer.jpg",
+      "description": "The Singapore Flyer is the national personification of Singapore",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "address": "9 Flyer, Singapore",
+      "website": "www.singaporeflyer.com"
+    },
+    "additionalDataPosition": [
+      {
+        "x": 80,
+        "y": 32
+      },
+      {
+        "x": 110,
+        "y": 60
+      }
+    ]
+  },
+  {
+    "lat": 1.302279,
+    "lng": 103.837399,
+    "about": {
+      "name": "Orchard Road",
+      "img": "./img/orchardroad.jpg",
+      "description": "The Orchard Road is the national personification of Singapore",
+      "content": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "address": "9 Orchard Road, Singapore",
+      "website": "www.orchard.com"
+    },
+    "additionalDataPosition": [
+      {
+        "x": 75,
+        "y": 32
+      },
+      {
+        "x": 104,
+        "y": 60
+      }
+    ]
+  }
+]
